@@ -34,7 +34,7 @@ async def on_message(message):
             await message.channel.send("{}는 어드민이 아닙니다.".format(author))
     
     if message.content.startswith("!도움"):
-        embed = discord.Embed(title="도움말" , description="dd")
+        embed = discord.Embed(title="도움말" , description="")
         embed.add_field(name="!안녕",value="테스트용" ,inline=False)
         embed.add_field(name="!정리",value="!정리 : 봇 정리 \n !정리 @멘션 : 특정 사용자 대화 정리" ,inline=False)
         embed.add_field(name="!라인",value="!라인 [이름] [이름] [이름] [이름] [이름] : 라인 랜덤 배정" ,inline=False)
