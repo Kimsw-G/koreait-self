@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/loginStyle.css">
+</head>
+<body>
+    <form method="GET" action="./main.html">
+        <label for="id">ID</label>
+        <input type="text" id="id" placeholder="아이디" name="id"><br>
+        <label for="pw">PW</label>
+        <input type="password" id="pw" placeholder="패스워드" name="pw"><br>
+
+        <input type="button" value="회원가입" onclick="location.href='join.html'">
+        <input type="button" value="로그인" onclick="chkLogin();">
+    </form>
+
+    <script>
+        function chkLogin(){
+            
+            var txtIdElm = document.getElementById('id').value;
+            var txtPwElm = document.getElementById('pw').value;
+            // alert(txtIdElm);
+            if(txtIdElm=="" || txtPwElm==""){
+                alert('아이디랑 패스워드를 입력해주세요');
+                location.href = 'login.html';
+            }else{
+                location.href = 'main.html?'+
+                     'id='+txtIdElm+
+                     '&pw='+txtPwElm;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/loginStyle.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <form action="login.html" method="POST">
+        <input type="button" value="뒤로가기" onclick="goback();"><br>
+
+        <label for="id">ID</label>
+        <input type="text" id="id" placeholder="아이디" name="id"><br>
+        <label for="pw">PW</label>
+        <input type="password" id="pw" placeholder="패스워드" name="pw"><br>
+        <label for="pwck">PWCheck</label>
+        <input type="password" id="pwck" placeholder="패스워드확인" name="pwck"><br>
+
+        <input type="button" value="회원가입" onclick="chkJoin();"><br>
+    </form>
+
+    <script>
+        function goback(){
+            history.back();
+        }
+
+        function chkJoin(){
+            var idElm = document.getElementById('id').value;
+            var pwElm = document.getElementById('pw').value;
+            var pwckElm = document.getElementById('pwck').value;
+
+            if(idElm==""||pwElm==""||pwckElm==""){//칸이 비어있는 경우
+                alert('회원가입 할 수 없습니다.');
+                location.href = 'join.html';
+            }else if(pwElm!=pwckElm){
+                alert('패스워드를 확인해주세요');
+                location.href = 'join.html';
+            }else{
+                location.href = 'login.html';
+            }
+        }
+        
+    </script>
+</body>
+</html>
