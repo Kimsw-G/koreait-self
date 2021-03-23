@@ -1,3 +1,5 @@
+package Exam01;
+
 import java.util.Random;
 
 public class Calc {
@@ -26,7 +28,7 @@ public class Calc {
         day++;//하루 경과!
         System.out.println(day + "일"+amount+"개"+cash+"원"+price+"원");
         if(price<25 || day == n){
-            return cash/(day);//현재까지 번 돈 / 경과일. 평균 일 수익
+            return 0;//현재까지 번 돈 / 경과일. 평균 일 수익
         }
         amount += p[day]; // 전일 재고량 + 금일 생산량
         if(amount>=c[day]){ // 주문량 할당 완료시

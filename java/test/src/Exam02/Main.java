@@ -1,8 +1,9 @@
 package Exam02;
 
 public class Main {
-    public static void main(String args[]){
+    public static void main(String args[]) throws InterruptedException{
         Stick stick = new Stick(5);
-        System.out.println(stick.stickCalc());
+        stick.stickMain();
     }
 }
+

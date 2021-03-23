@@ -1,3 +1,5 @@
+package Exam01;
+
 public class Main {
     
 
