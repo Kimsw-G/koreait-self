@@ -1,8 +1,8 @@
-package Exam02;
+package exam02;
 
 public class Main {
     public static void main(String args[]) throws InterruptedException{
-        Stick stick = new Stick(5);
+        Stick stick = new Stick(6);
         stick.stickMain();
     }
 }
