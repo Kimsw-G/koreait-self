@@ -2,10 +2,10 @@ package imsi;
 
 public class Imsi{
     public static void main(String[] args) {
-        double doubleValue = 2.7;
-        float floatValue = 2.7f;
-
-        System.out.println((float)doubleValue);
-        System.out.println((double)floatValue);
+        for(int i = 0; i < 5; i++){
+            System.out.println("안녕");
+            if(i==2)continue;
+            System.out.println("하세요");
+        }
     }
 }
