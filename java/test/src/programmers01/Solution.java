@@ -37,3 +37,6 @@ public class Solution {
         return answer;
     }
 }
+
+
+// 크레인이 갔을때 아무것도 없는 경우 해결하기!!!!
