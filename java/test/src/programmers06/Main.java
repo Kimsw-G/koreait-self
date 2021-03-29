@@ -1,12 +1,15 @@
 package programmers06;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {3,1,2,3};
-
         Solution sol = new Solution();
 
+        int[] answers = {2, 3, 3, 1, 2, 5};
 
-        System.out.println(sol.solution(nums));
+
+        System.out.println(Arrays.toString(sol.solution(answers)));
+        
     }
 }
