@@ -20,4 +20,4 @@ async def 라인(ctx):
     await print(ctx.content)
     await ctx.send(ctx.content)
 
-bot.run('ODIxMTk0ODY3MTM2Mzk3MzMy.YFALUQ.0f-eiEFZR7XJU_mzCh1Y5wqBjUQ')    
+bot.run('dd')    
