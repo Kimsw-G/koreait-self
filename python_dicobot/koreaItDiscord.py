@@ -43,4 +43,4 @@ async def on_message(message):
         await msg.add_reaction("\U00000030\U0000FE0F\U000020E3")
         return
  
-client.run('ODIwODg5Nzk2MTQ1OTcxMjIx.YE7vMg.lIo_Exff9tpISzHSpgQQfNAmb0c')
+client.run('dd')
