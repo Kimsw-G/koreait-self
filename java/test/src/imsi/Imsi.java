@@ -7,3 +7,7 @@ public class Imsi{
         
     }
 }
+
+class Yes{
+    private final int MAX_INT=0;
+}
