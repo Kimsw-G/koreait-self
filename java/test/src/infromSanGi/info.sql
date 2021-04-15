@@ -4,13 +4,15 @@
 -- grant all privileges on ksw.* to 'kimsw'@'localhost';
 
 -- use ksw;
+create database ksw;
 
+use ksw;
 
 -- table 생성
 create table workprocess(
-    -> name varchar(10) not null,
-    -> fullname varchar(20),
-    -> info varchar(50)
+    name varchar(10) not null,
+    fullname varchar(100),
+    info varchar(200)
 );
 
 
@@ -40,7 +42,7 @@ insert into workprocess (name, fullname, info) values
 ('IRM','Information Resource Management','정보 자원 관리'),
 ('ISP','Information Strategy Planning','기업수립 목표를 효과적으로 지원하기 위한 전략'),
 ('ITSM','IT Service Management','계획,설계,제공 운영. 사용자 요구 서비스에 초점. 프로세스,인력,조직,기술'),
-('ITIL','IT Instructive Library','운영 및 관리를 돕는 문서집합');
+('ITIL','IT Instructive Library','운영 및 관리를 돕는 문서집합')
 ('KMS','Knowledge Mnagements System','기존 기업 정보시스템, 기업환경 중요도 부각'),
 ('MDM','Master Data Management','마스터 데이터 단일화'),
 ('MOT','Management of Technology','기업 경쟁력 강화를 위한 기술경영을 통합. 스탠퍼드 밀러교수'),
@@ -59,5 +61,4 @@ insert into workprocess (name, fullname, info) values
 ('VOC','Voice of Customer','고객의 목소리'),
 ('VRM','Vender Relationshop Management','개인 정보를 기업에서 관리하는 기법'),
 ('WBS','Work BreakDown Structure','프로젝트를 여러개의 단위로 나누어 기술'),
-('벤치마킹',NULL,'특정분야 우수 롤모델 분석-개선'),
--- 여기까지는 완료
+('벤치마킹',NULL,'특정분야 우수 롤모델 분석-개선');

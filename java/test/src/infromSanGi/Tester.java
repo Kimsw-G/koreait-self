@@ -52,8 +52,8 @@ public class Tester {
         
         Class.forName("org.mariadb.jdbc.Driver");
         String url = "jdbc:mariadb://localhost:3306/ksw";
-        String id = "kimsw";
-        String pw = "1234";
+        String id = "root";
+        String pw = "koreait";
         con = DriverManager.getConnection(url,id,pw);
 
         String sql = "select * from workprocess";
