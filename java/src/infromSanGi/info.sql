@@ -94,5 +94,7 @@ insert into workprocess (name, fullname, info) values
 ('CopyLeft',null,'저작권 기반 공유 주장. 저작권의 반대 개념. 지식.정보 독점 반대.'),
 ('DLP','Data Leakage/LossPrevention-데이터 유출 방지','내부정보 유출방지 솔루션. 사내 직원 사용 PC 검색,탐지,통제'),
 ('CC','Common Criteria-공통 평가 기준','1996년 6월 8일. ISO 15408표준 정보화 순기능 역할을 보장.정보보호 사용환경등급 기준'),
-('SSL','Secure Socket Layer-','송수신 객체 사이에서 TCP/IP 계층과 어플리케이션 계층 사이에서 인증,암호화,무결성을 보장'),
-('ProxyServer')
+('SSL','Secure Socket Layer-','송/수신 객체 사이에서 TCP/IP 계층과 어플리케이션 계층 사이에서 인증,암호화,무결성을 보장'),
+('ProxyServer','프록시 서버','PC와 인터넷 사이의 중개자 역할. 방화벽, 캐시 기능 존재'),
+('HDCP','High-bandwidth Digital Content Protection-고대역폭 디지털 콘텐츠 전송 보호','송/수신간 고대역폭의 비디오 암호화 전송을 보호하기위한 규격'),
+('BigData','빅데이터','기존의 관ㄹ 방법이나, 분석 체계로는 처리하기 어려운 막대한 양의 정형 또는 비정형 데이터 집합. 스마트 단말의 빠른 확산, SNS 활성화,IOT 활성화')
