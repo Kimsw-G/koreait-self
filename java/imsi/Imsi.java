@@ -3,21 +3,25 @@ package imsi;
 
 public class Imsi{
     public static void main(String[] args)  {
-        int[] arr = new int[10];
-        long num = 1613461572;
-
-        int length = (int)(Math.log10(num)+1);
-
-        for(int i=0;i<length;i++){
-            int temp = (int)(num%10); // 가장 첫자리 저장
-            num /= 10; // 가장 앞자리 죽이기
-            arr[temp]++;
-        }
-
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        int[] arr = {5,7,89,1,4,6,8};
+        
+        System.out.println(Amu.getMax(arr));
     }
 
 }
 
+class Amu{
+
+    static int getMax(int[] arr){
+        int max=arr[0];
+
+        for (int i : arr) {
+            if (max<=i) {
+                max = i;
+            }
+        }
+        return max;
+    }
+
+    
+}
