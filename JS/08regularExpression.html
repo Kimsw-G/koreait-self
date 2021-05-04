@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 선언
+        var pattern = /a/;
+        //var pattern = new RegExp('a');
+        
+        var ab = 'abcdef';
+        var bc = 'bcdefg';
+
+        // exec
+        console.log(pattern.exec(ab)); // ["a"]
+        console.log(pattern.exec(bc)); // null
+
+        //test
+        console.log(pattern.test(ab)); // true
+        console.log(pattern.test(bc)); // false
+
+        //match
+        console.log(ab.match(pattern)); // ["a"]
+        console.log(bc.match(pattern)); // null
+
+        //replace
+        console.log(ab.replace(pattern,'A')); // Abcdef
+
+        // i 대소문자 구분x
+        var xi = /a/;
+        console.log('Abcdef'.match(xi));//null
+        var oi = /a/i;
+        console.log('Abcdef'.match(oi));//["A"]
+        
+        // g 모든 결과 검색
+        var xg = /a/;
+        console.log('abcdefa'.match(xg));
+        var og = /a/g;
+        console.log('abcdefa'.match(og));
+
+        var pattern = /(\w+)\s(\w+)/;
+        var str = 'coding everybody';
+        var rs = str.replace(pattern,"$2, $1");
+        console.log(rs);
+
+        // 정규표현식 참고
+        // http://blog.eomdev.com/java/2016/03/31/regExp.html 참고
+    </script>
+</body>
+</html>

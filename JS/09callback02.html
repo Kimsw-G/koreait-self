@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./jquery/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+        $.get('./datasource.json.js',
+        function(result){
+            console.log(result);
+        },
+        'json'
+    )
+
+    //서버 환경에서만 구동
+</script>
+</body>
+</html>
