@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello(name) {
+            var _name = name;
+            return function() {
+                console.log('Hello, ' + _name);
+            };
+        }
+
+        var hello1 = hello('승민');
+        var hello2 = hello('현섭');
+        var hello3 = hello('유근');
+
+        hello1(); // 'Hello, 승민'
+        hello2(); // 'Hello, 현섭'
+        hello3(); // 'Hello, 유근'
+        hello1._name = 'anno'; // 없기때문에 접근 불가능
+        hello1();
+    </script>
+</head>
+<body>
+    <input type="button" value="0">
+    <input type="button" value="1">
+    <input type="button" value="2">
+</body>
+</html>

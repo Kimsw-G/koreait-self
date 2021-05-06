@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            document.getElementById("button").onclick = function () {
+                // input 요소의 데이터 가져오기
+                var h  =parseFloat(document.getElementById("height").value);
+                var w  =parseFloat(document.getElementById("weight").value);
+                
+                console.log(w/h/h);
+
+                var bmi = document.getElementById("bmi");
+                bmi.innerHTML = (w/h/h).toFixed(1);
+            };
+        };
+    </script>
+</head>
+<body>
+    <p>키(m) : <input type="number" id="height"></p>
+    <p>체중 : <input type="number" id="weight"></p>
+    <p>bmi : <output id="bmi">?</output> 입니다</p>
+    <input type="button" id="button" value="계산">
+</body>
+</html>

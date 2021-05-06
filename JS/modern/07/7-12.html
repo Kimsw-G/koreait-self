@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function diamond(c,n,x,y,r,color) {
+            c.strokeStyle = color;
+            c.beginPath();
+            for (let i = 0; i < n; i++) {
+                var t = i*2*Math.PI/n; // 시작점을 설정해준다
+                for (let j = i+1; j < n; j++) {
+                    //점이 시작하는 부분
+                    c.moveTo(x + r*Math.cos(t), y+r*Math.sin(t));
+                    //점이 끝나는 부분(까지 선을 긋기)
+                    var s = j*2*Math.PI/n; // 시작점에서 나아갈 곳들을 설정해준다
+                    c.lineTo(x + r*Math.cos(s), y+r*Math.sin(s));
+                }                
+            }
+            c.stroke();
+        }
+        window.onload = function () {
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            // diamond(ctx,6,170,170,150,'darkblue');
+            // diamond(ctx,12,490,170,150,'darkblue');
+            // diamond(ctx,18,810,170,150,'darkblue');
+            diamond(ctx,6,170,170,150,'darkblue');
+
+        };
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width="1000" height="400"></canvas>
+</body>
+</html>
