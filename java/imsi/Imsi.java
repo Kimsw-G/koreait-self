@@ -3,7 +3,7 @@ package imsi;
 
 public class Imsi{
     public static void main(String[] args)  {
-        System.out.println(1/10);
+        int a  = Integer.parseInt("ss");
 
         
     }
