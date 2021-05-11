@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		if (flag) { // 인증 성공!
 			// 인증이 성공하였다는 정보를 session에 저장하자
 			HttpSession session = request.getSession();
-			session.setAttribute("id", memberVO.getM_id());
+			session.setAttribute("memberVO", memberVO);
 			ServletUtil.goJSP("/todo/normal", request, response);
 		}//실패?
 		request.setAttribute("flag", false);

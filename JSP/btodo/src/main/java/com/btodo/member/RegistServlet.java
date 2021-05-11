@@ -14,6 +14,7 @@ import com.util.ServletUtil;
 @WebServlet("/member/regist")
 public class RegistServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ServletUtil.goJSP("/public/regist", request, response);
 	}

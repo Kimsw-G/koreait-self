@@ -15,11 +15,11 @@
 		<label for="pwck">비밀번호 체크</label><input type="password" placeholder="비밀번호 체크" name="pwck" id="pwck"><br>
 		<label for="name">이름</label><input type="text" placeholder="이름	" name="name" id="name"><br>
 		<label for="tel">전화번호</label>
-		<div id="tel[]">
+		<div id="tel">
 		<%-- 첫 박스는 드롭다운으로 구현 --%>
-			<input type="number" name="tel" id="tel1"> 
-			<input type="number" name="tel" id="tel2">
-			<input type="number" name="tel" id="tel3">		
+			<input type="number" name="tel" id="tel_"> 
+			<input type="number" name="tel" id="tel_">
+			<input type="number" name="tel" id="tel_">		
 		</div>
 		
 	</form>
