@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./elt.js"></script>
+    <script>
+        window.onload = ()=>{
+            createInconEditor(document.body,16,16);
+        };
+        function createInconEditor(parent,nx,ny) {
+            // color 버튼 선택
+            var color = elt('input', {type:'color'});
+            // 모두 삭제 버튼
+            var clear = elt('input', {type:'button', value:'모두 삭제'});
+            clear.onclick = function(e){
+                cells.forEach(function(td){td.style.backgroundColor = 'white';});
+            };
+            // 편집기 화면 테이블
+            var table = elt('table');
+            table.style.boardCollapse = 'collapse';
+            table.style.marginTop = '5px';
+            var cells = [];
+            for(var j=0; j<ny; j++){
+                var tr = elt("tr");
+                table.appendChild(tr);
+                for(var i=0; i<nx;i++){
+
+                    var td = elt('td');
+                    cells.push(td);
+                    td.style.width = td.style.height = '15px';
+                    td.style.border = '1px solid gray';
+                    tr.appendChild(td);
+                    // 셀 클릭시 동작 이벤트 설정
+                    td.onclick = function changeColor(e){
+                        e.target.style.backgroundColor = color.value;
+                    }
+                }
+            }
+            parent.appendChild(color);
+            parent.appendChild(clear);
+            parent.appendChild(table);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
