@@ -21,7 +21,7 @@
 			<input type="number" name="tel" id="tel_">
 			<input type="number" name="tel" id="tel_">		
 		</div>
-		
+		<input type="submit" value="회원가입">
 	</form>
 </div>
 </body>

@@ -19,13 +19,13 @@
 
 
 <div id="wrapper">
-	<form action="/member/login" method="post" id="loginFrom">
-		<input type="text" name="id" placeholder="아이디">
-		<input type="password" name="pw" placeholder="비밀번호">
+	<form action="/member/login" method="post" id="loginForm">
+		<input type="text" name="id" placeholder="아이디" value="kimsw">
+		<input type="password" name="pw" placeholder="비밀번호" value="3445"><br>
 		<button type="submit" form="loginForm">로그인</button>
-		<button onclick="location.href='/member/regist'">회원가입</button>
 		<%-- 후에 구글, 네이버 로그인 기능 구현해주기 --%>
 	</form>
+	<button onclick="location.href='/member/regist'">회원가입</button>
 </div>
 
 </body>

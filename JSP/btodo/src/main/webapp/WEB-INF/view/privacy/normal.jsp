@@ -5,16 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${id}'s TODO</title>
+<title>${memberVO.m_name}'s TODO</title>
 </head>
 <body>
 
 	<div id="wrapper">
-		<div id="index"><%--상단 버튼! --%>
-			<button>Normal</button>
-			<button>Daily</button>
-			<button>D-Day</button>
-		</div>
+		<jsp:include page="./todonav/todoNav.jsp"/>
 		<div id="todoList" class="normal">
 		<%-- 스크롤 설정하기! --%>
 		<c:forEach var="todo" items="${todoList}">

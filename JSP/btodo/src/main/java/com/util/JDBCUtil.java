@@ -11,7 +11,7 @@ public class JDBCUtil {
 	public static Connection getCon() {
 		Connection con = null;
 		try {
-			final String DB_NAME = "seatapp";
+			final String DB_NAME = "btodo";
 			final String DRIVER = "org.mariadb.jdbc.Driver";
 			final String URL = "jdbc:mysql://localhost/" + DB_NAME;
 			final String USER_NAME = "root";

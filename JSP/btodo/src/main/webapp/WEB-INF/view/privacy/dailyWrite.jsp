@@ -5,22 +5,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${memberVO.m_name}'s TODO</title>
+<title>Insert title here</title>
 </head>
 <body>
+
 	<div id="wrapper">
 		<jsp:include page="./todonav/todoNav.jsp"/>
-		<div id="todoList" class="dday">
-		<c:forEach var="todo" items="${todoList}">
-		<input type="hidden" name="dday" value="${todo.dday}"> <%-- 이 값을 js로 넘기기 --%>
-			<p>
-			<p>${todo.content }</p>
+	<form action="/todo/dailyWrite" method="post">
+		<c:forEach var="i" begin="1" end="7">
+			${date[i-1]}<input type="checkbox" value="${i}" name="todoDate">
 		</c:forEach>
-		</div>
-	</div>
+		<input type="text" name="ctnt">
 	
-<script type="text/javascript">
-	var ddate;
-</script>
+		<input type="submit" value="등록하기">
+	</form>
+	</div>
 </body>
 </html>

@@ -31,7 +31,7 @@ public class RegistServlet extends HttpServlet {
 		MemberDAO.insertMember(memberVO); // 0일시 에러 발생!
 		
 		// 로그인 페이지로 넘겨주자
-		ServletUtil.goJSP("./login", request, response);
+		ServletUtil.goJSP("/member/login", request, response);
 		
 	}
 	

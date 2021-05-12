@@ -1,5 +1,8 @@
 package com.model;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class NormalTodoVO {
 	private int normal_pk;
 	private int m_pk;
@@ -37,5 +40,14 @@ public class NormalTodoVO {
 	public void setDoCheck(boolean doCheck) {
 		this.doCheck = doCheck;
 	}
+	
+	public void inputData(ResultSet rs) {
+		try {normal_pk = rs.getInt("normal_pk");} catch (Exception e) {}
+		try {m_pk = rs.getInt("m_pk");} catch (Exception e) {}
+		try {regDate = rs.getString("regDate");} catch (Exception e) {}
+		try {ctnt = rs.getString("ctnt");} catch (Exception e) {}
+		try {doCheck = rs.getBoolean("docheck");} catch (Exception e) {}
+	}
+	
 	
 }

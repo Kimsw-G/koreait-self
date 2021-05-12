@@ -1,9 +1,12 @@
 package com.model;
 
-public class DDayTodoVO {
+import java.sql.Date;
+
+public class DdayTodoVO {
 	private int dDay_pk;
 	private int m_pk;
 	private String content;
+	private Date dday;
 	public int getdDay_pk() {
 		return dDay_pk;
 	}
@@ -21,6 +24,12 @@ public class DDayTodoVO {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public Date getDday() {
+		return dday;
+	}
+	public void setDday(Date dday) {
+		this.dday = dday;
 	}
 	
 	

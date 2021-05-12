@@ -1,13 +1,13 @@
 create table member(
-	m_pk int auto_increament primary key,
-	m_id varchar(20), -- uniq 옵션 필요
+	m_pk int auto_increment primary key,
+	m_id varchar(20) unique,
 	m_pw char(60),
 	m_name char(5),
 	m_tel varchar(15)
 );
 
 create table normaltodo(
-	normal_pk int auto_increament primary key,
+	normal_pk int auto_increment primary key,
 	m_pk int,
 	regdate date default now(),
 	ctnt varchar(50),
@@ -16,13 +16,14 @@ create table normaltodo(
 );
 
 create table dailytodo(
-	daily_pk int auto_increament primary key,
+	daily_pk int auto_increment primary key,
 	m_pk int,
 	regdate date default now(),
 	todoDate int(3),
 	ctnt varchar(50),
 	dday_pk int,
-	FOREIGN KEY (m_pk) REFERENCES member (m_pk)
+	FOREIGN KEY (m_pk) REFERENCES member (m_pk),
+	FOREIGN KEY (dday_pk) REFERENCES ddaytodo (dday_pk)
 );
 
 create table dailypercent(
@@ -32,9 +33,10 @@ create table dailypercent(
 );
 
 create table ddaytodo(
-	dday_pk int auto_increament primary key,
+	dday_pk int auto_increment primary key,
 	content varchar(50),
+	dday date,
 	m_pk int,
 	FOREIGN KEY (m_pk) REFERENCES member (m_pk)
-)
+);
 

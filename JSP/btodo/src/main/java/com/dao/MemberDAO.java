@@ -20,6 +20,7 @@ public class MemberDAO {
 				+"values "
 				+"(?,?,?,?)";
 		try {
+			System.out.println(vo.getM_name());
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, vo.getM_id());
 			pstmt.setString(2, vo.getM_pw());
@@ -35,26 +36,36 @@ public class MemberDAO {
 	}
 	
 	public static String selectPw(MemberVO vo) {
-		String pw = "";
+		String pw = selectMemberVOById(vo.getM_id()).getM_pw();
+		System.out.println(pw);
+		if(pw == null) pw = "";
+		
+		return pw;
+	}
+	
+	public static MemberVO selectMemberVOById(String id) {
+		MemberVO vo = new MemberVO();
 		Connection con = JDBCUtil.getCon();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
-		String sql = "select pw from member where id = ?";
+		String sql = "select * from member where m_id = ?";
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, vo.getM_id());
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				pw = rs.getString(1);
+				vo.setM_id(rs.getString("m_id"));
+				vo.setM_name(rs.getString("m_name"));
+				vo.setM_pk(rs.getInt("m_pk"));
+				vo.setM_pw(rs.getString("m_pw"));
+				vo.setM_tel(rs.getString("m_tel"));
 			}
-			return pw;
 		} catch (SQLException e) {
-			System.out.println("pw 구하기 실패!");
 			e.printStackTrace();
-			return pw;
 		}finally {
 			JDBCUtil.close(con, pstmt, rs);
 		}
+		return vo;
 	}
 }

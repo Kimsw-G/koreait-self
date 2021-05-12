@@ -6,7 +6,7 @@ public class DailyTodoVO {
 	private String regDate;
 	private int todoDate;//요일 계산
 	private String ctnt;
-	private int dday_pk; // ddaytodo에서 가져올 fk
+	private int dday_pk;
 	public int getDaily_pk() {
 		return daily_pk;
 	}
@@ -43,5 +43,4 @@ public class DailyTodoVO {
 	public void setDday_pk(int dday_pk) {
 		this.dday_pk = dday_pk;
 	}
-	
 }
