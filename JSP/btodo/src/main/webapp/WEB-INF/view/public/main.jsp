@@ -6,27 +6,25 @@
 <head>
 <meta charset="UTF-8">
 <title>BananaTodo</title>
-
+<link href="/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/css/public/public.css" rel="stylesheet" type="text/css" />
+<link href="/css/public/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<c:if test="">
-	<jsp:forward page="/todo/main"/>
-</c:if>
-
 <c:if test="${flag}"> <%--로그인 실패시 스크립트로 알람 띄우기--%>
 
 </c:if>
 
+<h1>BananaTODO</h1>
 
-<div id="wrapper">
-	<form action="/member/login" method="post" id="loginForm">
-		<input type="text" name="id" placeholder="아이디" value="kimsw">
-		<input type="password" name="pw" placeholder="비밀번호" value="3445"><br>
-		<button type="submit" form="loginForm">로그인</button>
-		<%-- 후에 구글, 네이버 로그인 기능 구현해주기 --%>
-	</form>
-	<button onclick="location.href='/member/regist'">회원가입</button>
-</div>
+<form action="/member/login" method="post" id="wrapper">
+	<input type="text" id="id" name="id" placeholder="아이디" value="kimsw">
+	<input type="password" id="password" name="pw" placeholder="비밀번호" value="3445"><br>
+	<button type="submit" id="login" form="wrapper">로그인</button>
+	<%-- 후에 구글, 네이버 로그인 기능 구현해주기 --%>
+	<a href="/member/regist" id="regist">BananaTODO 무료 회원가입</a>
+</form>
+
 
 </body>
 </html>

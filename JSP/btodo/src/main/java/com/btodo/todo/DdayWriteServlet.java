@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dao.DdayTodoDAO;
 import com.model.DdayTodoVO;
 import com.model.MemberVO;
 import com.util.ServletUtil;
@@ -29,6 +30,9 @@ public class DdayWriteServlet extends HttpServlet {
 		dv.setM_pk(mv.getM_pk());
 		
 		// dv를 dao로 보내서 출력하세요!!
+		DdayTodoDAO.insertDdayTodo(dv);
+		
+		response.sendRedirect("/todo/dday");
 		
 	}
 

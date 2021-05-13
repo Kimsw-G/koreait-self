@@ -1,16 +1,18 @@
 package com;
 
+import java.sql.Date;
+import java.util.Calendar;
+
 public class Hello {
 	public static void main(String[] args) {
 	
-		String sBin1 = "1001011";
-		String sBin2 = "0010000";
+		int a =Calendar.getInstance().get(Calendar.DAY_OF_WEEK)-1;
+		int b = (int)Math.pow(2, a);
+		System.out.println(b);
+		System.out.println(73 & b);
 		
-		int iBin1 = Integer.parseInt(sBin1, 2);
-		int iBin2 = Integer.parseInt(sBin2, 2);
-		String result = Integer.toBinaryString(iBin1&iBin2);
-		System.out.println(result);
+		
 	}
 }
 
-
+ 

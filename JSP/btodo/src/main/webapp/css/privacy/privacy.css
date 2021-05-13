@@ -1,0 +1,16 @@
+#wrapper{
+    /* 전체 페이지 그려주기 */
+    width: 500px;
+    height: 800px;
+    background-color: whitesmoke;
+}
+
+#index{
+    width: 100%;
+    display: flex;
+}
+
+#index div{
+    flex-grow: 1;
+    text-align: center;
+}

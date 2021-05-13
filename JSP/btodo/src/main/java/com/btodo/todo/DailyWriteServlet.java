@@ -44,9 +44,10 @@ public class DailyWriteServlet extends HttpServlet {
 	
 	private int calcDate(HttpServletRequest request) {
 		int cnt = 0;
-		String[] todoDates = request.getParameterValues("todoDate");
-		for (int i = 0; i < 7; i++) {
-			cnt += Math.pow(i,2) * Integer.parseInt(todoDates[i]);
+		String[] todoDates = request.getParameterValues("todoDate"); 
+		// 배열 크기 4
+		for (int i = 0; i < todoDates.length; i++) {
+			cnt += Math.pow(2,Integer.parseInt(todoDates[i])); 
 		}
 		return cnt;
 	}

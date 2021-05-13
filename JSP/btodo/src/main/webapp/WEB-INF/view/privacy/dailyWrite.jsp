@@ -13,7 +13,7 @@
 		<jsp:include page="./todonav/todoNav.jsp"/>
 	<form action="/todo/dailyWrite" method="post">
 		<c:forEach var="i" begin="1" end="7">
-			${date[i-1]}<input type="checkbox" value="${i}" name="todoDate">
+			${date[i-1]}<input type="checkbox" value="${i-1}" name="todoDate">
 		</c:forEach>
 		<input type="text" name="ctnt">
 	
@@ -22,3 +22,4 @@
 	</div>
 </body>
 </html>
+

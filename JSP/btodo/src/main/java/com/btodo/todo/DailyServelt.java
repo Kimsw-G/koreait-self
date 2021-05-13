@@ -31,7 +31,7 @@ public class DailyServelt extends HttpServlet {
 		// 수요일 => 4, 67에 4가 들어있는지 검사.
 		// 해당값이 false일시 그 요일을 삭제한다
 		for (DailyTodoVO dv : list_) {
-			if (checkDate(dv.getTodoDate()))list.add(dv); //오늘 체크된 list만 반환해주기!
+			if (checkDate(dv.getTodoDate())) list.add(dv); //오늘 체크된 list만 반환해주기!
 		}
 		
 		request.setAttribute("todoList", list);
@@ -42,9 +42,9 @@ public class DailyServelt extends HttpServlet {
 	}
 	
 	private boolean checkDate(int dateBin) {
-		int date = Calendar.getInstance().get(Calendar.DATE);
-		
-		if((date&dateBin)==0) return false;
+		int date = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)-1;
+		System.out.println((int)Math.pow(2, date));
+		if(((int)Math.pow(2, date)&dateBin)==0) return false;
 		return true;
 	}
 

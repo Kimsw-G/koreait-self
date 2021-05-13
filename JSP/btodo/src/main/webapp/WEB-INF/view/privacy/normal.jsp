@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>${memberVO.m_name}'s TODO</title>
+<link href="/css/privacy/normal.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -19,12 +20,10 @@
 			<p>${todo.regDate}</p>		
 		</c:forEach>
 		</div>
-		<div>
 		<form action="/todo/normal" method="post">
 			<input type="text" name="ctnt">
 			<input type="submit" value="등록">		
 		</form>
-		</div>
 	</div>
 </body>
 </html>
