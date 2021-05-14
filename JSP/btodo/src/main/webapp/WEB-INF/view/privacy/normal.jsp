@@ -15,9 +15,11 @@
 		<div id="todoList" class="normal">
 		<%-- 스크롤 설정하기! --%>
 		<c:forEach var="todo" items="${todoList}">
-			<input type="checkbox">
-			<p>${todo.ctnt}</p>
-			<p>${todo.regDate}</p>		
+		<div class="index">
+			<input type="checkbox" class="check">
+			<p class="ctnt">${todo.ctnt}</p>
+			<p class="regDate">${todo.regDate}</p>		
+		</div>
 		</c:forEach>
 		</div>
 		<form action="/todo/normal" method="post">
@@ -25,5 +27,9 @@
 			<input type="submit" value="등록">		
 		</form>
 	</div>
+	
+<script>
+	document.getElementById("normal").style.borderBottom="21px solid whitesmoke";
+</script>
 </body>
 </html>

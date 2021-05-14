@@ -1,5 +1,5 @@
 #todoList{
-    flex-grow: 1;
+    height: 779px;
     overflow-y: auto;
 
     display: flex;
@@ -12,7 +12,7 @@
     margin-right: 20px;
 }
 
-.check,.regDate,.ctnt{
+.dday, .ctnt, .delete{
     height: 21px;
     margin-top: 16px;
     margin-bottom: 16px;
@@ -20,14 +20,14 @@
     margin-right: 0px;
 }
 
-.check{
-    flex-basis: 30px;
+.dday{
+    flex-basis: 80px;
 }
 
 .ctnt{
-    flex-basis: 560px;
+    flex-basis: 510px;
 }
 
-.regDate{
+.delete{
     flex-basis: 120px;
 }

@@ -21,6 +21,10 @@ public class DailyServelt extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MemberVO mv = ServletUtil.getSessionInfo(request);
+		if (mv==null) {
+			response.sendRedirect("/member/login");
+			return;
+		}
 		List<DailyTodoVO> list_ = DailyTodoDAO.selectDailyTodoList(mv);
 		List<DailyTodoVO> list = new ArrayList<DailyTodoVO>();
 		// mv.todoDate의 값은 이 일을 해야하는 요일이 담겨져있다.
