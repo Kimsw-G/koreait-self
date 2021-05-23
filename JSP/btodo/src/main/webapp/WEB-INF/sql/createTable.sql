@@ -1,3 +1,7 @@
+create database btodo
+
+use btodo;
+
 create table member(
 	m_pk int auto_increment primary key,
 	m_id varchar(20) unique,
