@@ -16,7 +16,7 @@ create table normaltodo(
 	regdate date default now(),
 	ctnt varchar(50),
 	docheck boolean,
-	FOREIGN KEY (m_pk) REFERENCES member (m_pk)
+	FOREIGN KEY (m_pk) REFERENCES member (m_pk) on delete cascade on update cascade
 );
 
 create table dailytodo(
@@ -26,14 +26,14 @@ create table dailytodo(
 	todoDate int(3),
 	ctnt varchar(50),
 	dday_pk int,
-	FOREIGN KEY (m_pk) REFERENCES member (m_pk),
-	FOREIGN KEY (dday_pk) REFERENCES ddaytodo (dday_pk)
+	FOREIGN KEY (m_pk) REFERENCES member (m_pk) on delete cascade on update cascade,
+	FOREIGN KEY (dday_pk) REFERENCES ddaytodo (dday_pk) on delete cascade on update cascade
 );
 
 create table dailypercent(
 	daily_pk int,
 	check_date date,
-	FOREIGN KEY (daily_pk) REFERENCES dailytodo (daily_pk)
+	FOREIGN KEY (daily_pk) REFERENCES dailytodo (daily_pk) on delete cascade on update cascade
 );
 
 create table ddaytodo(
@@ -41,6 +41,6 @@ create table ddaytodo(
 	content varchar(50),
 	dday date,
 	m_pk int,
-	FOREIGN KEY (m_pk) REFERENCES member (m_pk)
+	FOREIGN KEY (m_pk) REFERENCES member (m_pk) on delete cascade on update cascade
 );
 
